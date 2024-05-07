@@ -77,9 +77,9 @@ export  const handleMassDelete = async (selectedIds: number[],setSelectedIds:Rea
             });
 
             console.log(response);
-            
 
             if (!response.ok) {
+                alert('Failed to create product. This SKU already exists!');
                 throw new Error('Failed to create product');
             }
 
